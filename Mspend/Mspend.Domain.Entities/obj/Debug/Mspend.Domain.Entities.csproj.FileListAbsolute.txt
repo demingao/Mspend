@@ -1,0 +1,16 @@
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Mspend.Domain.Entities.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Mspend.Domain.Entities.pdb
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.csprojResolveAssemblyReference.cache
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.pdb
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\FluentNHibernate.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Iesi.Collections.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Mspend.Framework.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\NHibernate.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\log4net.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Mspend.Framework.pdb
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\FluentNHibernate.pdb
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\FluentNHibernate.xml
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Iesi.Collections.xml
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\NHibernate.xml
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\log4net.xml

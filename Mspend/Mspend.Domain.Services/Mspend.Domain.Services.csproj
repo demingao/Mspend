@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D645CE4E-17C4-4287-92D8-265024333528}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mspend.Domain.Services</RootNamespace>
+    <AssemblyName>Mspend.Domain.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mspend.Data\Mspend.Data.csproj">
+      <Project>{fda44f9e-893a-498e-bf58-0dd339bd8da5}</Project>
+      <Name>Mspend.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mspend.Domain.Entities\Mspend.Domain.Entities.csproj">
+      <Project>{17e7979a-319c-4d92-ae77-7d8c95316b76}</Project>
+      <Name>Mspend.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mspend.Domain.Interfaces\Mspend.Domain.Interfaces.csproj">
+      <Project>{05745249-c042-4568-a16d-b9cf100e4e47}</Project>
+      <Name>Mspend.Domain.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mspend.Domain.Repositories\Mspend.Domain.Repositories.csproj">
+      <Project>{48fe8a17-80a2-48ad-9d2c-faddd5cdbd8e}</Project>
+      <Name>Mspend.Domain.Repositories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mspend.Framework\Mspend.Framework.csproj">
+      <Project>{40f9ba4c-65dc-4992-bb1b-a307ad39026c}</Project>
+      <Name>Mspend.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
