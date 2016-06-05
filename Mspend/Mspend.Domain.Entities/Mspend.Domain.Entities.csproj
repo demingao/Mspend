@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs" />
+    <Compile Include="Mapper\CategoryMap.cs" />
+    <Compile Include="Mapper\MspendRecordMap.cs" />
     <Compile Include="Mapper\UserMap.cs" />
     <Compile Include="MspendRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

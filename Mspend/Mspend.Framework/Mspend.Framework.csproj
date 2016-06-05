@@ -45,6 +45,7 @@
     <Compile Include="Caching\Cache.cs" />
     <Compile Include="Caching\ICache.cs" />
     <Compile Include="Domain\IEntity.cs" />
+    <Compile Include="Helper\Md5.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Log4netLogger.cs" />
     <Compile Include="Logging\LoggingExtensions.cs" />
@@ -60,6 +61,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

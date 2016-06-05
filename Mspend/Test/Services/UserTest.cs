@@ -29,11 +29,18 @@ namespace Test.Services
             IocConfig.Container.Resolve<IUserService>().Register(new User()
             {
                 CreateTime = DateTime.Now,
-                LoginName = "test",
-                NickName = "test",
+                LoginName = "gdm1",
+                NickName = "gaodeming",
                 Password = "123456",
                 ProfilePicture = ""
             });
+        }
+
+        [Test]
+        public void Md5()
+        {
+          Console.WriteLine(Mspend.Framework.Helper.Md5.Encrypt16("test"));
+          Console.WriteLine(Mspend.Framework.Helper.Md5.Encrypt32("testtest"));  
         }
     }
 }
