@@ -18,16 +18,18 @@ using Mspend.Framework.UnitOfWork;
 
 namespace Test
 {
-    public class IocConfig
+    public static class IocConfig
     {
-        public static IContainer Container { get; set; }
+        public static IContainer Container { get; private set; }
 
         public static void Inject()
         {
             var builder = new ContainerBuilder();
-            builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
+            builder.RegisterGeneric(typeof(Repository<,>)).As(typeof(IRepository<,>));
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
             builder.RegisterType<UserService>().As<IUserService>();
+            builder.RegisterType<CategoryService>().As<ICategoryService>();
+            builder.RegisterType<MspendRecordService>().As<IMspendRecordService>();
             Container = builder.Build();
         }
     }

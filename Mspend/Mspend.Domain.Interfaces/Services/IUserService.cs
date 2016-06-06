@@ -10,5 +10,6 @@ namespace Mspend.Domain.Interfaces.Services
     public interface IUserService
     {
         bool Register(User user);
+        User Login(string userName, string password);
     }
 }

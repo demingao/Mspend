@@ -42,6 +42,8 @@ namespace Mspend.Data
 
         public void BeginTransation()
         {
+            if(!Session.IsOpen)
+                Session = SessionFactory.OpenSession();
             _transaction = Session.BeginTransaction();
         }
 

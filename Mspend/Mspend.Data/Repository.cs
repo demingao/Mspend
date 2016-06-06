@@ -12,7 +12,7 @@ using NHibernate.Linq;
 
 namespace Mspend.Data
 {
-    public class Repository<T> : IRepository<T> where T : IEntity
+    public class Repository<T, TKey> : IRepository<T, TKey> where T : IEntity
     {
         private readonly UnitOfWork _unitOfWork;
 
@@ -36,14 +36,14 @@ namespace Mspend.Data
             return Session.Query<T>().Where(func).AsQueryable();
         }
 
-        public T Get(int id)
+        public T Get(TKey id)
         {
             return Session.Get<T>(id);
         }
 
-        public void Create(T entity)
+        public TKey Create(T entity)
         {
-            Session.Save(entity);
+            return (TKey)Session.Save(entity);
         }
 
         public void Update(T entity)

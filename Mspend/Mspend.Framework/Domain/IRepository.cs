@@ -9,12 +9,12 @@ using System.Linq.Expressions;
 
 namespace Mspend.Framework.Domain
 {
-    public interface IRepository<T> where T : IEntity
+    public interface IRepository<T, TKey> where T : IEntity
     {
         IQueryable<T> All();
         IQueryable<T> FindBy(Expression<Func<T,bool>> func);
-        T Get(int id);
-        void Create(T entity);
+        T Get(TKey id);
+        TKey Create(T entity);
         void Update(T entity);
         void Delete(T entity);
     }

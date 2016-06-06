@@ -12,10 +12,12 @@ namespace Mspend.Domain.Entities
     public class MspendRecord : IEntity
     {
         public virtual int Id { get; set; }
-        public User Owner { get; set; }
-        public Category Category { get; set; }
+        public virtual string Name { get; set; }
         public virtual decimal Money { get; set; }
         public virtual string Description { get; set; }
+        public virtual DateTime RecordTime { get; set; }
         public virtual DateTime CreateTime { get; set; }
+        public virtual User Owner { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
