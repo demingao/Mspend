@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+using System.Threading;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using Api.Models;
 using Autofac;
-using Microsoft.Ajax.Utilities;
+using Mspend.Domain.Entities;
 using Mspend.Domain.Interfaces.Services;
 
 namespace Api.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/account")]
     public class AccountController : ApiController
     {
-        private IUserService _userService;
+        private readonly IUserService _userService;
 
         public AccountController()
             : this(IocConfig.Container.Resolve<IUserService>())
@@ -22,13 +22,28 @@ namespace Api.Controllers
         }
         public AccountController(IUserService userService)
         {
-            _userService = userService;
+            _userService = IocConfig.Container.Resolve<IUserService>();
         }
         [Route("login")]
-        public IHttpActionResult Login(string name, string password)
+        [HttpPost]
+        public IHttpActionResult Login(AccoutLogin login)
         {
-            var user = _userService.Login(name, password);
-            return Ok();
+            var user = _userService.Login(login.UserName, login.Password);
+            Thread.Sleep(1000);
+            return Ok(new { StatusCode = 0 });
+        }
+        [Route("register")]
+        [HttpPost]
+        public IHttpActionResult Register(AccoutRegister entity)
+        {
+            var res = _userService.Register(new User()
+            {
+                LoginName = entity.UserName,
+                NickName = entity.NickName,
+                Password = entity.Password,
+                CreateTime = DateTime.Now
+            });
+            return Ok(new { StatusCode = 0, MSG = res });
         }
     }
 }

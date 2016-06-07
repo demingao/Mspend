@@ -2,3 +2,8 @@ E:\DM\Private\Mspend\Mspend\Mspend.Domain.Repositories\bin\Debug\Mspend.Domain.R
 E:\DM\Private\Mspend\Mspend\Mspend.Domain.Repositories\bin\Debug\Mspend.Domain.Repositories.pdb
 E:\DM\Private\Mspend\Mspend\Mspend.Domain.Repositories\obj\Debug\Mspend.Domain.Repositories.dll
 E:\DM\Private\Mspend\Mspend\Mspend.Domain.Repositories\obj\Debug\Mspend.Domain.Repositories.pdb
+F:\DM\Mspend\Mspend\Mspend.Domain.Repositories\bin\Debug\Mspend.Domain.Repositories.dll
+F:\DM\Mspend\Mspend\Mspend.Domain.Repositories\bin\Debug\Mspend.Domain.Repositories.pdb
+F:\DM\Mspend\Mspend\Mspend.Domain.Repositories\obj\Debug\Mspend.Domain.Repositories.csprojResolveAssemblyReference.cache
+F:\DM\Mspend\Mspend\Mspend.Domain.Repositories\obj\Debug\Mspend.Domain.Repositories.dll
+F:\DM\Mspend\Mspend\Mspend.Domain.Repositories\obj\Debug\Mspend.Domain.Repositories.pdb

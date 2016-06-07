@@ -4,3 +4,10 @@ E:\DM\Private\Mspend\Mspend\Mspend.Framework\bin\Debug\log4net.dll
 E:\DM\Private\Mspend\Mspend\Mspend.Framework\bin\Debug\log4net.xml
 E:\DM\Private\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.dll
 E:\DM\Private\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.pdb
+F:\DM\Mspend\Mspend\Mspend.Framework\bin\Debug\Mspend.Framework.dll
+F:\DM\Mspend\Mspend\Mspend.Framework\bin\Debug\Mspend.Framework.pdb
+F:\DM\Mspend\Mspend\Mspend.Framework\bin\Debug\log4net.dll
+F:\DM\Mspend\Mspend\Mspend.Framework\bin\Debug\log4net.xml
+F:\DM\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.csprojResolveAssemblyReference.cache
+F:\DM\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.dll
+F:\DM\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.pdb
