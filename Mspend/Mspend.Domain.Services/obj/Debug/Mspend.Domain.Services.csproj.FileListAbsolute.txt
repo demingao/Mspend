@@ -46,3 +46,4 @@ F:\DM\Mspend\Mspend\Mspend.Domain.Services\bin\Debug\Iesi.Collections.xml
 F:\DM\Mspend\Mspend\Mspend.Domain.Services\obj\Debug\Mspend.Domain.Services.csprojResolveAssemblyReference.cache
 F:\DM\Mspend\Mspend\Mspend.Domain.Services\obj\Debug\Mspend.Domain.Services.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Services\obj\Debug\Mspend.Domain.Services.pdb
+F:\DM\Mspend\Mspend\Mspend.Domain.Services\bin\Debug\AutoMapper.dll

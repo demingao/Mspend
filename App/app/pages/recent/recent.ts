@@ -1,4 +1,7 @@
 import {Page, NavController} from 'ionic-angular';
+import {Category as CategoryService} from '../../providers/category/category';
+import {Recent} from '../../model/recent';
+import {Category} from '../../model/model';
 
 /*
   Generated class for the RecentPage page.
@@ -8,7 +11,14 @@ import {Page, NavController} from 'ionic-angular';
 */
 @Page({
   templateUrl: 'build/pages/recent/recent.html',
+  providers: [CategoryService]
 })
 export class RecentPage {
-  constructor(public nav: NavController) {}
+  private recents:any;
+  constructor(public nav: NavController, public ser: CategoryService) {
+    ser.load().then(data => {
+      this.recents=data;
+    });
+    console.log(this.recents);
+  }
 }

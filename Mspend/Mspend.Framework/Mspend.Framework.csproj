@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.5.0.0-beta-1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -45,6 +48,7 @@
     <Compile Include="Caching\Cache.cs" />
     <Compile Include="Caching\ICache.cs" />
     <Compile Include="Domain\IEntity.cs" />
+    <Compile Include="Extensions\AutoMapperExtensions.cs" />
     <Compile Include="Helper\Md5.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Log4netLogger.cs" />

@@ -18,7 +18,7 @@ namespace Mspend.Domain.Entities.Mapper
             Map(x => x.CreateTime).Not.Nullable();
             References(x => x.Parent, "ParentId").Nullable();
             References(x => x.Owner, "OwnerId").Nullable();
-
+            HasMany(x=>x.Records);
         }
     }
 }

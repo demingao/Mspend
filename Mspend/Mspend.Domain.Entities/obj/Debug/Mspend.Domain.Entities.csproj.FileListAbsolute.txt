@@ -30,3 +30,4 @@ F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\log4net.xml
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.csprojResolveAssemblyReference.cache
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.pdb
+F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\AutoMapper.dll

@@ -4,6 +4,9 @@
 * @version 1.0
 * =======================================================================*/
 
+using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using Mspend.Domain.Entities;
 
 namespace Mspend.Domain.Interfaces.Services
@@ -12,5 +15,6 @@ namespace Mspend.Domain.Interfaces.Services
     {
         MspendRecord Create(MspendRecord entity);
         bool MakeDelete(MspendRecord entity);
+        IEnumerable<MspendRecord> Findby(Expression<Func<MspendRecord, bool>> exp);
     }
 }
