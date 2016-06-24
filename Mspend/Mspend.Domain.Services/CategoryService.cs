@@ -6,8 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq.Expressions;
 using Mspend.Domain.Entities;
 using Mspend.Domain.Interfaces.Services;
 using Mspend.Framework.Domain;
@@ -45,6 +44,10 @@ namespace Mspend.Domain.Services
         public Category Get(int id)
         {
             return Repository.Get(id);
+        }
+        public IEnumerable<Category> Findby(Expression<Func<Category, bool>> exp)
+        {
+            return Repository.FindBy(exp).ToList();
         }
     }
 }

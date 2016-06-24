@@ -29,7 +29,7 @@ namespace Test.Services
             IocConfig.Container.Resolve<IUserService>().Register(new User()
             {
                 CreateTime = DateTime.Now,
-                LoginName = "gdm1",
+                LoginName = "gdm",
                 NickName = "gaodeming",
                 Password = "123456",
                 ProfilePicture = ""

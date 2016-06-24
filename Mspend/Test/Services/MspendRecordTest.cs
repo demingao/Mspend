@@ -49,6 +49,22 @@ namespace Test.Services
             var ser = IocConfig.Container.Resolve<ICategoryService>();
           
             var cats = ser.FindBy();
+        } 
+        [Test]
+        public void Recent()
+        {
+            var ser = IocConfig.Container.Resolve<IMspendRecordService>();
+            var cser = IocConfig.Container.Resolve<ICategoryService>();
+            var now = DateTime.Now;
+            var w = (int)now.DayOfWeek;
+            var start = DateTime.Now.AddDays(w == 0 ? w - 6 : -(w - 1));
+            var end = DateTime.Now.AddDays(w == 0 ? 0 : 7 - w);
+            var today = ser.Findby(x => x.RecordTime>=now.Date&&x.RecordTime<now.Date.AddDays(1)).OrderByDescending(x => x.CreateTime);
+            var laskWeek = ser.Findby(x => x.RecordTime >= start && x.RecordTime <= end).OrderByDescending(x => x.CreateTime);
+            if (today.Any())
+            {
+                var t = today.GroupBy(x => x.Category);
+            }
         }
     }
 }

@@ -1152,7 +1152,7 @@ var i,
 	// CSS escapes http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
 	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
 	funescape = function( _, escaped, escapedWhitespace ) {
-		var high = "0x" + escaped - 0x10000;
+		var high = "0x" + escaped - 0x10;
 		// NaN means non-codepoint
 		// Support: Firefox
 		// Workaround erroneous numeric interpretation of +"0x"
@@ -1160,7 +1160,7 @@ var i,
 			escaped :
 			// BMP codepoint
 			high < 0 ?
-				String.fromCharCode( high + 0x10000 ) :
+				String.fromCharCode( high + 0x10 ) :
 				// Supplemental Plane codepoint (surrogate pair)
 				String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
 	};
@@ -3767,7 +3767,7 @@ jQuery.extend({
 		"applet": true,
 		"embed": true,
 		// Ban all objects except for Flash (which handle expandos)
-		"object": "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+		"object": "clsid:D27CDB6E-AE6D-11cf-96B8-444553540"
 	},
 
 	hasData: function( elem ) {

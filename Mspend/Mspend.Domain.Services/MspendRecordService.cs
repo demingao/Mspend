@@ -6,8 +6,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Mspend.Domain.Entities;
 using Mspend.Domain.Interfaces.Services;
 using Mspend.Framework.Domain;
@@ -33,9 +31,15 @@ namespace Mspend.Domain.Services
             return Repository.Get(res);
         }
 
-        public bool MakeDelete(Entities.MspendRecord entity)
+        public bool MakeDelete(MspendRecord entity)
         {
             throw new NotImplementedException();
+        }
+
+
+        public IEnumerable<MspendRecord> Findby(System.Linq.Expressions.Expression<Func<MspendRecord, bool>> exp)
+        {
+            return Repository.FindBy(exp).ToList();
         }
     }
 }
