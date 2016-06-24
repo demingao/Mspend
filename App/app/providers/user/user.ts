@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http,Headers,RequestOptions} from '@angular/http';
+import {Http, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Config} from '../../providers/config/config';
 
@@ -14,15 +14,17 @@ export class User {
   data: any = null;
 
   constructor(public http: Http) { }
-  login(username: string, password: string) {  
-    let headers = new Headers({'Access-Control-Allow-Origin':'*','Content-Type':'application/json' });
+  login(username: string, password: string) {
+    let headers = new Headers({ 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-   return new Promise(resolve => {
-      let data = { UserName: username, Password: password };
-      this.http.post(Config.UrlCtor('account','login'), JSON.stringify(data),options)
-        .map(res => res.json())
-        .subscribe(data => resolve(data));
-    });
+     return new Promise(resolve => {
+        let data = { UserName: username, Password: password };
+        this.http.post(Config.UrlCtor('account','login'), JSON.stringify(data),options)
+          .map(res => res.json())
+          .subscribe(data => resolve(data));
+      });
+    // let data = { UserName: username, Password: password };
+    // return this.http.post(Config.UrlCtor('account', 'login'), JSON.stringify(data), options).toPromise();
   }
   load() {
     if (this.data) {

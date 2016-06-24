@@ -27,6 +27,9 @@ export class LoginPage {
       console.log(data);
       loading.dismiss();
       this.nav.setRoot(MspendTabsPage);
+    }).catch(e => {
+      loading.dismiss();
+      console.log(e);
     });
   }
 }
