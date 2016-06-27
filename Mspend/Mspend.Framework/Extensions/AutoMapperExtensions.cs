@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
-
+using AutoMapper.Execution;
 
 namespace Mspend.Framework.Extensions
 {
@@ -67,12 +67,10 @@ namespace Mspend.Framework.Extensions
 
         public static IEnumerable<TDst> Maps<TSrc, TDst>(this IEnumerable<TSrc> src)
         {
-            var map = Mapper.Instance.ConfigurationProvider.FindTypeMapFor<TSrc, TDst>();
-            if (map == null)
-                Mapper.Initialize(cfg => cfg.CreateMap<TSrc, TDst>());
             try
             {
-                return Mapper.Map<List<TSrc>, List<TDst>>(src.ToList());
+                var res = Mapper.Map<IEnumerable<TDst>>(src);
+                return res;
             }
             catch (Exception e)
             {

@@ -53,12 +53,12 @@ namespace Api.Controllers
                 new RecentModel()
                 {
                     CategoryName = "今天",
-                    MspendRecords = today.Maps<MspendRecord, MspendRecordModel>()
+                    MspendRecords = today.ToList().Maps<MspendRecord, MspendRecordModel>()
                 },
                 new RecentModel()
                 {
                     CategoryName = "本周",
-                    MspendRecords = laskWeek.Maps<MspendRecord, MspendRecordModel>()
+                    MspendRecords = laskWeek.ToList().Maps<MspendRecord, MspendRecordModel>()
                 }
             };
             return Ok(res);

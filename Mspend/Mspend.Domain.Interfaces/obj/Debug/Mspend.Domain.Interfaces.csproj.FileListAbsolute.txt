@@ -35,3 +35,4 @@ F:\DM\Mspend\Mspend\Mspend.Domain.Interfaces\obj\Debug\Mspend.Domain.Interfaces.
 F:\DM\Mspend\Mspend\Mspend.Domain.Interfaces\obj\Debug\Mspend.Domain.Interfaces.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Interfaces\obj\Debug\Mspend.Domain.Interfaces.pdb
 F:\DM\Mspend\Mspend\Mspend.Domain.Interfaces\bin\Debug\AutoMapper.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Interfaces\bin\Debug\AutoMapper.dll

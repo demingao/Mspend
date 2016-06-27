@@ -132,3 +132,7 @@ F:\DM\Mspend\Mspend\api\bin\System.Web.Cors.dll
 F:\DM\Mspend\Mspend\api\bin\System.Web.Http.Cors.dll
 F:\DM\Mspend\Mspend\api\bin\System.Web.Http.Cors.xml
 F:\DM\Mspend\Mspend\Api\bin\AutoMapper.dll
+E:\DM\Private\Mspend\Mspend\Api\bin\AutoMapper.dll
+E:\DM\Private\Mspend\Mspend\Api\bin\System.Web.Cors.dll
+E:\DM\Private\Mspend\Mspend\Api\bin\System.Web.Http.Cors.dll
+E:\DM\Private\Mspend\Mspend\Api\bin\System.Web.Http.Cors.xml

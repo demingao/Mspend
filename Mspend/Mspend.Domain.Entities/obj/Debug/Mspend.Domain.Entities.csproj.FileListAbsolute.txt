@@ -31,3 +31,4 @@ F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.cspr
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.pdb
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\AutoMapper.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\AutoMapper.dll

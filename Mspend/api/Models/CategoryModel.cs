@@ -12,6 +12,6 @@ namespace Api.Models
         public string Description { get; set; }
         public decimal TotalPrice { get; set; }
         public DateTime CreateTime { get; set; }
-        public IEnumerable<MspendRecordModel> Records { get; set; }
+       // public IEnumerable<MspendRecordModel> Records { get; set; }
     }
 }

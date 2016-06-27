@@ -7,23 +7,17 @@
 <ion-navbar *navbar>
   <ion-title>最近消费</ion-title>
 </ion-navbar>
-
 <ion-content>
   <ion-list *ngFor="let type of recents">
-    <ion-list-header>
+    <ion-list-header item-right>
       {{type.CategoryName}}
     </ion-list-header>
-    <ion-item *ngFor="let cat of type.Categorys">
-      <ion-avatar item-left>
-        <h2>{{cat.Name}}</h2>
-        <p>{{cat.TotalPrice}}元</p>
-      </ion-avatar>
-     <div>
-       <div *ngFor="let rec of cat.Records">
-         <h2>{{rec.Name}}</h2>
-          <h2>{{rec.Money}}元</h2>
-       </div>
-     </div>
-    </ion-item>  
+    <ion-item *ngFor="let mr of type.MspendRecords">
+      <div>
+        <h2>{{mr.Name}}<ion-badge item-right>{{mr.Money}}元</ion-badge></h2>
+        
+      </div>
+      <ion-badge item-right>{{mr.Category.Name}}</ion-badge>
+    </ion-item>
   </ion-list>
 </ion-content>

@@ -12,19 +12,13 @@ namespace Mspend.Domain.Entities
 {
     public class Category : IEntity
     {
-        public Category()
-        {
-            Records = new List<MspendRecord>();
-        }
-
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
         public virtual string Description { get; set; }
         public virtual int Sort { get; set; }
         public virtual  Category Parent { get; set; }
-        public virtual  IEnumerable<Category> Children { get; set; }
+       // public virtual  IEnumerable<Category> Children { get; set; }
         public virtual User Owner { get; set; }
         public virtual DateTime CreateTime { get; set; }
-        public virtual IEnumerable<MspendRecord> Records { get; set; }
     }
 }
