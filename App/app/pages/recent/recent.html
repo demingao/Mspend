@@ -9,6 +9,7 @@
 </ion-navbar>
 <ion-content>
   <ion-list *ngFor="let type of recents">
+<<<<<<< HEAD
     <ion-list-header>
       <b>{{type.CategoryName}}</b>
       <span>
@@ -37,6 +38,17 @@
       <ion-note item-right>
         <ion-badge>{{mr.Category.Name}}</ion-badge>
       </ion-note>
+=======
+    <ion-list-header item-right>
+      {{type.CategoryName}}
+    </ion-list-header>
+    <ion-item *ngFor="let mr of type.MspendRecords">
+      <div>
+        <h2>{{mr.Name}}<ion-badge item-right>{{mr.Money}}元</ion-badge></h2>
+        
+      </div>
+      <ion-badge item-right>{{mr.Category.Name}}</ion-badge>
+>>>>>>> 662133fc942e02e808162917c4d72e5b412a0ae3
     </ion-item>
   </ion-list>
   <div>

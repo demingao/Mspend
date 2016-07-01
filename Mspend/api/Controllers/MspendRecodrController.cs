@@ -71,12 +71,20 @@ namespace Api.Controllers
                 new RecentModel()
                 {
                     CategoryName = "今天",
+<<<<<<< HEAD
                     MspendRecords = today.Maps<MspendRecord, MspendRecordModel>().Select(x=>{x.RecordTime="";return x;})
+=======
+                    MspendRecords = today.ToList().Maps<MspendRecord, MspendRecordModel>()
+>>>>>>> 662133fc942e02e808162917c4d72e5b412a0ae3
                 },
                 new RecentModel()
                 {
                     CategoryName = "本周",
+<<<<<<< HEAD
                     MspendRecords = laskWeek.Maps<MspendRecord, MspendRecordModel>().Select(x=>{x.RecordTime=Convert.ToDateTime(x.RecordTime).ToShortDateString();return x;})
+=======
+                    MspendRecords = laskWeek.ToList().Maps<MspendRecord, MspendRecordModel>()
+>>>>>>> 662133fc942e02e808162917c4d72e5b412a0ae3
                 }
             };
             return Ok(res);

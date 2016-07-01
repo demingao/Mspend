@@ -12,3 +12,5 @@ F:\DM\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.csprojResolveAss
 F:\DM\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.dll
 F:\DM\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.pdb
 F:\DM\Mspend\Mspend\Mspend.Framework\bin\Debug\AutoMapper.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Framework\bin\Debug\AutoMapper.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Framework\obj\Debug\Mspend.Framework.csprojResolveAssemblyReference.cache

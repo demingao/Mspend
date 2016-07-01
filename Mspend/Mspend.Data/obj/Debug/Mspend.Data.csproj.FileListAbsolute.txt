@@ -35,3 +35,4 @@ F:\DM\Mspend\Mspend\Mspend.Data\obj\Debug\Mspend.Data.csprojResolveAssemblyRefer
 F:\DM\Mspend\Mspend\Mspend.Data\obj\Debug\Mspend.Data.dll
 F:\DM\Mspend\Mspend\Mspend.Data\obj\Debug\Mspend.Data.pdb
 F:\DM\Mspend\Mspend\Mspend.Data\bin\Debug\AutoMapper.dll
+E:\DM\Private\Mspend\Mspend\Mspend.Data\bin\Debug\AutoMapper.dll
