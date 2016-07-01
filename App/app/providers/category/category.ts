@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http,Headers,RequestOptions} from '@angular/http';
+import {Http, Headers, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Config} from '../../providers/config/config';
 
@@ -11,12 +11,14 @@ import {Config} from '../../providers/config/config';
 */
 @Injectable()
 export class Category {
-  constructor(public http: Http) {}
+  
+  constructor(public http: Http) { }
+
   load() {
-    let headers = new Headers({'Access-Control-Allow-Origin':'*','Content-Type':'application/json' });
+    let headers = new Headers({ 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-   return new Promise(resolve => {     
-      this.http.get(Config.UrlCtor('mr','recent'),options)
+    return new Promise(resolve => {
+      this.http.get(Config.UrlCtor('cat', 'get'), options)
         .map(res => res.json())
         .subscribe(data => resolve(data));
     });

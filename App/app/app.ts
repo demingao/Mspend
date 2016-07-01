@@ -5,7 +5,7 @@ import {LoginPage} from './pages/login/login';
 
 @App({
   templateUrl: 'build/app.html',
-  config: {mode:"ios"} // http://ionicframework.com/docs/v2/api/config/Config/
+  config: {mode:"md"} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MspendApp {
   rootPage: any = LoginPage;

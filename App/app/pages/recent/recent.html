@@ -7,23 +7,41 @@
 <ion-navbar *navbar>
   <ion-title>最近消费</ion-title>
 </ion-navbar>
-
 <ion-content>
   <ion-list *ngFor="let type of recents">
     <ion-list-header>
-      {{type.CategoryName}}
+      <b>{{type.CategoryName}}</b>
+      <span>
+        <ion-note>
+          总共消费:
+          <ion-icon name="logo-yen" danger>100</ion-icon>
+        </ion-note>
+       </span>
     </ion-list-header>
-    <ion-item *ngFor="let cat of type.Categorys">
-      <ion-avatar item-left>
-        <h2>{{cat.Name}}</h2>
-        <p>{{cat.TotalPrice}}元</p>
-      </ion-avatar>
-     <div>
-       <div *ngFor="let rec of cat.Records">
-         <h2>{{rec.Name}}</h2>
-          <h2>{{rec.Money}}元</h2>
-       </div>
-     </div>
-    </ion-item>  
+    <ion-item *ngFor="let mr of type.MspendRecords">
+      <ion-note item-left></ion-note>
+      <div>
+        <p>
+          <b>{{mr.Name}}</b>
+          <ion-note item-right>{{mr.RecordTime}} </ion-note>
+        </p>
+      </div>
+      <div>
+        <p>
+          <ion-icon name="logo-yen" danger>{{mr.Money}}</ion-icon>
+        </p>
+      </div>
+      <p>
+        <ion-note>{{mr.Description}}</ion-note>
+      </p>
+      <ion-note item-right>
+        <ion-badge>{{mr.Category.Name}}</ion-badge>
+      </ion-note>
+    </ion-item>
   </ion-list>
+  <div>
+    <button class="fab-right fab-bottom" [navPush]="record" fab fab-right fab-bottom fab-fixed danger>   
+    <ion-icon name="add"></ion-icon>  
+  </button> 
+  </div>
 </ion-content>

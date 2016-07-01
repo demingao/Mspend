@@ -43,8 +43,14 @@ namespace Mspend.Domain.Services
             if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password)) return null;
             var user = Repository.FindBy(x => x.LoginName == userName).FirstOrDefault();
             if (user == null || user.Password != Md5.Encrypt16(password)) return null;
-            user.Password = null;
+           // user.Password = null;
             return user;
+        }
+
+
+        public IEnumerable<User> FindBy(System.Linq.Expressions.Expression<Func<User, bool>> exp)
+        {
+            return exp == null ? Enumerable.Empty<User>() : Repository.FindBy(exp);
         }
     }
 }

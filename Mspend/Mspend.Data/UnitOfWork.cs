@@ -19,7 +19,16 @@ namespace Mspend.Data
     {
         private static readonly ISessionFactory SessionFactory;
         private ITransaction _transaction;
-        public ISession Session { get; private set; }
+        private ISession _session;
+
+        public ISession Session
+        {
+            get
+            {
+                if (!_session.IsOpen) _session = SessionFactory.OpenSession();
+                return _session;
+            }
+        }
 
         static UnitOfWork()
         {
@@ -37,14 +46,12 @@ namespace Mspend.Data
 
         public UnitOfWork()
         {
-            Session = SessionFactory.OpenSession();
+            _session = SessionFactory.OpenSession();
         }
 
         public void BeginTransation()
         {
-            if(!Session.IsOpen)
-                Session = SessionFactory.OpenSession();
-            _transaction = Session.BeginTransaction();
+            _transaction = _session.BeginTransaction();
         }
 
         public void Commit()
@@ -62,7 +69,7 @@ namespace Mspend.Data
             }
             finally
             {
-                Session.Dispose();
+                _session.Dispose();
             }
         }
 
@@ -75,7 +82,7 @@ namespace Mspend.Data
             }
             finally
             {
-                Session.Dispose();
+                _session.Dispose();
             }
         }
     }

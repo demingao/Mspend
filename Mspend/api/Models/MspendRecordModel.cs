@@ -11,8 +11,9 @@ namespace Api.Models
         public  string Name { get; set; }
         public  decimal Money { get; set; }
         public  string Description { get; set; }
-        public  DateTime RecordTime { get; set; }
+        public  string RecordTime { get; set; }
         public  DateTime CreateTime { get; set; }
+        public int CatId { get; set; }
         public CategoryModel Category { get; set; }
     }
 }

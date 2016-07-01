@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Web.Http;
 using System.Web.Http.Cors;
@@ -22,15 +23,22 @@ namespace Api.Controllers
         }
         public AccountController(IUserService userService)
         {
-            _userService = IocConfig.Container.Resolve<IUserService>();
+            _userService = userService;
         }
         [Route("login")]
         [HttpPost]
         public IHttpActionResult Login(AccoutLogin login)
         {
             var user = _userService.Login(login.UserName, login.Password);
-            Thread.Sleep(1000);
-            return Ok(new { StatusCode = 0 });
+            
+            return Ok(user);
+        }
+        [Route("uinfo")]
+        [HttpGet]
+        public IHttpActionResult Info()
+        {
+            var user = _userService.FindBy(x => x.LoginName.Equals("gdm")).FirstOrDefault();
+            return Ok(user);
         }
         [Route("register")]
         [HttpPost]

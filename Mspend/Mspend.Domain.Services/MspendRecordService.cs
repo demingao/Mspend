@@ -16,8 +16,8 @@ namespace Mspend.Domain.Services
     public class MspendRecordService : IMspendRecordService
     {
         protected readonly IUnitOfWork UnitOfWork;
-        protected readonly IRepository<MspendRecord,int> Repository;
-        public MspendRecordService(IUnitOfWork unitOfWork, IRepository<MspendRecord,int> repository)
+        protected readonly IRepository<MspendRecord, int> Repository;
+        public MspendRecordService(IUnitOfWork unitOfWork, IRepository<MspendRecord, int> repository)
         {
             UnitOfWork = unitOfWork;
             Repository = repository;
@@ -26,9 +26,10 @@ namespace Mspend.Domain.Services
         public MspendRecord Create(MspendRecord entity)
         {
             UnitOfWork.BeginTransation();
-            var res = Repository.Create(entity);
+            var id = Repository.Create(entity);
+            var res = Repository.Get(id);
             UnitOfWork.Commit();
-            return Repository.Get(res);
+            return res;
         }
 
         public bool MakeDelete(MspendRecord entity)

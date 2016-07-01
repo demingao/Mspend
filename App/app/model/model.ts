@@ -1,10 +1,6 @@
 export class Category {
     public Id: number;
     public Name: string;
-    public Description: string;
-    public TotalPrice: number;
-    public CreateTime: Date;
-    public Records:MspendRecord[];
 }
 export class MspendRecord {
     public Id: number;
@@ -13,4 +9,5 @@ export class MspendRecord {
     public Description: string;
     public RecordTime: Date;
     public CreateTime: Date;
+    public CatId:number;
 }
