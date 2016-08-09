@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 
 namespace Api.Models
 {
@@ -9,5 +6,6 @@ namespace Api.Models
     {
         public string CategoryName { get; set; }
         public IEnumerable<MspendRecordModel> MspendRecords { get; set; }
+        public decimal TotalMoney { get; set; }
     }
 }

@@ -5,17 +5,54 @@
   Ionic pages and navigation.
 -->
 <ion-navbar *navbar>
-  <ion-title>消费记录</ion-title>
+  <ion-title text-center>消费记录</ion-title>
 </ion-navbar>
-
-<ion-content padding>
+<ion-toolbar>
+  <ion-item>
+    <!--<ion-row>
+      <ion-col>-->
+    <ion-label>时间</ion-label>
+    <ion-select [(ngModel)]="model.DateType" cancelText="取消" okText="确定">
+      <ion-option *ngFor="let d of searchModel.DateTypes" checked="{{d.Id==0}}" value="{{d.Id}}">{{d.Name}}</ion-option>
+    </ion-select>
+    <!--</ion-col>
+      <ion-col>-->
+    <ion-label>类型</ion-label>
+    <ion-select [(ngModel)]="model.CategoryTypes" multiple="true" cancelText="取消" okText="确定">
+      <ion-option *ngFor="let c of searchModel.Cats" checked="true" value="{{c.Id}}">{{c.Name}}</ion-option>
+    </ion-select>
+    <!--</ion-col>
+    </ion-row>-->
+  </ion-item>
+</ion-toolbar>
+<ion-content>
   <ion-list>
-    <ion-list-header>
-     
-    </ion-list-header>
-    <ion-item>
-
-    </ion-item>
+    <ion-item-group *ngFor="let r of records">
+      <ion-card>
+        <ion-item-divider light>
+          <ion-row>
+            <ion-col>
+              <b>{{r.RecordDate}}</b>
+            </ion-col>
+            <ion-col text-right>
+              <ion-icon name="logo-yen" danger>{{r.TotalMoney}}</ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-item-divider>
+        <ion-item *ngFor="let mr of r.Records">
+          <b>{{mr.Name}}</b>
+          <p>
+            <ion-icon name="logo-yen" danger>{{mr.Money}}</ion-icon>
+          </p>
+          <ion-badge item-right primary>{{mr.Category.Name}}</ion-badge>
+          <p>{{mr.Description}}</p>
+        </ion-item>
+      </ion-card>
+    </ion-item-group>
   </ion-list>
-
+  <div>
+    <button class="fab-right fab-bottom" [navPush]="record" fab fab-right fab-bottom fab-fixed danger>   
+    <ion-icon name="add"></ion-icon>  
+  </button>
+  </div>
 </ion-content>

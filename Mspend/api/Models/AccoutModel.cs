@@ -15,4 +15,10 @@ namespace Api.Models
     {
         public string NickName { get; set; }
     }
+    public class AccoutModel
+    {
+        public string UserName { get; set; }
+        public string NickName { get; set; }
+        public string ProfilePicture { get; set; }
+    }
 }

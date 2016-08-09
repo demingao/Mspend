@@ -5,55 +5,41 @@
   Ionic pages and navigation.
 -->
 <ion-navbar *navbar>
-  <ion-title>最近消费</ion-title>
+  <ion-title text-center>最近消费</ion-title>
 </ion-navbar>
 <ion-content>
-  <ion-list *ngFor="let type of recents">
-<<<<<<< HEAD
-    <ion-list-header>
-      <b>{{type.CategoryName}}</b>
-      <span>
-        <ion-note>
-          总共消费:
-          <ion-icon name="logo-yen" danger>100</ion-icon>
-        </ion-note>
-       </span>
-    </ion-list-header>
-    <ion-item *ngFor="let mr of type.MspendRecords">
-      <ion-note item-left></ion-note>
-      <div>
-        <p>
-          <b>{{mr.Name}}</b>
-          <ion-note item-right>{{mr.RecordTime}} </ion-note>
-        </p>
-      </div>
-      <div>
-        <p>
-          <ion-icon name="logo-yen" danger>{{mr.Money}}</ion-icon>
-        </p>
-      </div>
-      <p>
-        <ion-note>{{mr.Description}}</ion-note>
-      </p>
-      <ion-note item-right>
-        <ion-badge>{{mr.Category.Name}}</ion-badge>
-      </ion-note>
-=======
-    <ion-list-header item-right>
-      {{type.CategoryName}}
-    </ion-list-header>
-    <ion-item *ngFor="let mr of type.MspendRecords">
-      <div>
-        <h2>{{mr.Name}}<ion-badge item-right>{{mr.Money}}元</ion-badge></h2>
-        
-      </div>
-      <ion-badge item-right>{{mr.Category.Name}}</ion-badge>
->>>>>>> 662133fc942e02e808162917c4d72e5b412a0ae3
-    </ion-item>
+  <ion-list>
+    <ion-item-group *ngFor="let type of recents">
+      <ion-card>
+        <ion-item-divider light>
+          <ion-row>
+            <ion-col>
+              <b>{{type.CategoryName}}</b>
+            </ion-col>
+            <ion-col text-right>
+              <ion-icon name="logo-yen" danger>{{type.TotalMoney}}</ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-item-divider>
+        <ion-item *ngFor="let mr of type.MspendRecords">
+          <div>
+            <b>{{mr.Name}}</b>
+            <ion-note item-right>{{mr.RecordTime}} </ion-note>
+          </div>
+          <p>
+            <ion-icon name="logo-yen" danger>{{mr.Money}}</ion-icon>
+          </p>
+          <ion-note item-right>
+            <ion-badge primary>{{mr.Category.Name}}</ion-badge>
+          </ion-note>
+          <p>{{mr.Description}}</p>
+        </ion-item>
+      </ion-card>
+    </ion-item-group>
   </ion-list>
   <div>
     <button class="fab-right fab-bottom" [navPush]="record" fab fab-right fab-bottom fab-fixed danger>   
     <ion-icon name="add"></ion-icon>  
-  </button> 
+  </button>
   </div>
 </ion-content>

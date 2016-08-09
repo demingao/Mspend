@@ -60,3 +60,4 @@ F:\DM\Mspend\Mspend\Test\bin\Debug\Iesi.Collections.xml
 F:\DM\Mspend\Mspend\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
 F:\DM\Mspend\Mspend\Test\obj\Debug\Test.dll
 F:\DM\Mspend\Mspend\Test\obj\Debug\Test.pdb
+F:\DM\Mspend\Mspend\Test\bin\Debug\AutoMapper.dll

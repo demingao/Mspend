@@ -9,6 +9,7 @@ using Mspend.Data;
 using Mspend.Domain.Interfaces.Services;
 using Mspend.Domain.Services;
 using Mspend.Framework.Domain;
+using Mspend.Framework.Logging;
 using Mspend.Framework.UnitOfWork;
 
 namespace Api
@@ -20,6 +21,7 @@ namespace Api
         public static void Configure()
         {
             var builder = new ContainerBuilder();
+            builder.RegisterInstance(new Log4netLogger("mspend.logger","configs/log4net.config")).As<ILogger>().SingleInstance();
             builder.RegisterGeneric(typeof(Repository<,>)).As(typeof(IRepository<,>)).InstancePerLifetimeScope();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
             builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();

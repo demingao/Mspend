@@ -67,19 +67,14 @@ namespace Mspend.Framework.Extensions
 
         public static IEnumerable<TDst> Maps<TSrc, TDst>(this IEnumerable<TSrc> src)
         {
-<<<<<<< HEAD
+
             //var map = Mapper.Instance.ConfigurationProvider.FindTypeMapFor<TSrc, TDst>();
             //if (map == null)
             //    Mapper.Instance.ConfigurationProvider.CreateMapper(cfg => cfg.CreateMap<TSrc, TDst>());
             try
             {
                 return Mapper.Map<IEnumerable<TSrc>, IEnumerable<TDst>>(src.ToList());
-=======
-            try
-            {
-                var res = Mapper.Map<IEnumerable<TDst>>(src);
-                return res;
->>>>>>> 662133fc942e02e808162917c4d72e5b412a0ae3
+
             }
             catch (Exception e)
             {

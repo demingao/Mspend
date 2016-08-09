@@ -49,6 +49,7 @@
     <Compile Include="Caching\ICache.cs" />
     <Compile Include="Domain\IEntity.cs" />
     <Compile Include="Extensions\AutoMapperExtensions.cs" />
+    <Compile Include="Extensions\ExpressionHelper.cs" />
     <Compile Include="Helper\Md5.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\Log4netLogger.cs" />

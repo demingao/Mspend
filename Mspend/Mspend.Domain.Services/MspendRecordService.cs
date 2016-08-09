@@ -25,10 +25,22 @@ namespace Mspend.Domain.Services
 
         public MspendRecord Create(MspendRecord entity)
         {
-            UnitOfWork.BeginTransation();
-            var id = Repository.Create(entity);
-            var res = Repository.Get(id);
-            UnitOfWork.Commit();
+            MspendRecord res = null;
+            try
+            {
+                UnitOfWork.BeginTransation();
+                var id = Repository.Create(entity);
+                res = Repository.Get(id);
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                UnitOfWork.Commit();
+            }
+         
             return res;
         }
 

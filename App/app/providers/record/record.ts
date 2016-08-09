@@ -1,8 +1,10 @@
 import {Injectable} from '@angular/core';
-import {Http, Headers, RequestOptions} from '@angular/http';
+import {Auth} from '../../providers/auth/auth';
 import 'rxjs/add/operator/map';
 import {Config} from '../../providers/config/config';
-import {MspendRecord} from'../../model/model';
+import {MspendRecord, Search} from'../../model/model';
+import {Storage, LocalStorage} from 'ionic-angular';
+import {Http} from '@angular/http';
 
 /*
   Generated class for the Record provider.
@@ -13,32 +15,25 @@ import {MspendRecord} from'../../model/model';
 @Injectable()
 export class Record {
   data: any = null;
-
-  constructor(public http: Http) { }
+  auth:Auth;
+  constructor(public http:Http) {
+    this.auth=new Auth(http);
+  }
 
   load(tab: number = 1) {
-    let headers = new Headers({ 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
     let action = '';
     switch (tab) {
       case 1:
         action = 'recent'
         break;
     }
-    return new Promise(resolve => {
-      this.http.get(Config.UrlCtor('mr', action), options)
-        .map(res => res.json())
-        .subscribe(data => resolve(data));
-    });
+    return this.auth.get(Config.UrlCtor('mr', action));
   }
   create(record: MspendRecord) {
-    let headers = new Headers({ 'Access-Control-Allow-Origin': '*', 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
-    return new Promise(resolve => {
-      this.http.post(Config.UrlCtor('mr', 'create'), JSON.stringify(record), options)
-        .map(res => res.json())
-        .subscribe(data => resolve(data));
-    });
+    return this.auth.post(Config.UrlCtor('mr', 'create'), record);
+  }
+  search(model: Search) {
+    return this.auth.post(Config.UrlCtor('mr', 'search'), model);
   }
 }
 

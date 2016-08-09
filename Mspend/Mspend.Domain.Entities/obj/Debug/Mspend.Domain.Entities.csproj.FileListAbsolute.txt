@@ -14,6 +14,7 @@ E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\log4net.xml
 E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.csprojResolveAssemblyReference.cache
 E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.dll
 E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.pdb
+E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\AutoMapper.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Mspend.Domain.Entities.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Mspend.Domain.Entities.pdb
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\FluentNHibernate.dll
@@ -21,6 +22,7 @@ F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Iesi.Collections.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Mspend.Framework.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\NHibernate.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\log4net.dll
+F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\AutoMapper.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\Mspend.Framework.pdb
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\FluentNHibernate.pdb
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\FluentNHibernate.xml
@@ -30,5 +32,3 @@ F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\log4net.xml
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.csprojResolveAssemblyReference.cache
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.dll
 F:\DM\Mspend\Mspend\Mspend.Domain.Entities\obj\Debug\Mspend.Domain.Entities.pdb
-F:\DM\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\AutoMapper.dll
-E:\DM\Private\Mspend\Mspend\Mspend.Domain.Entities\bin\Debug\AutoMapper.dll

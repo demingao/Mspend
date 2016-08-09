@@ -1,6 +1,7 @@
 import {Page, NavController} from 'ionic-angular';
 import {Record as RecordService} from '../../providers/record/record';
 import {RecordCreatePage} from '../../pages/record-create/record-create';
+import 'rxjs/add/operator/map';
 /*
   Generated class for the RecentPage page.
 
@@ -16,11 +17,10 @@ export class RecentPage {
   private record:any;
   constructor(public nav: NavController, public ser: RecordService) {
     this.record=RecordCreatePage;
-    ser.load().then(data => {     
-      this.recents=data;
+    ser.load().then(res => {     
+      this.recents=res.json();
     }).catch(e=>{
       console.log(e);
     });
-    console.log(this.recents);
   }
 }

@@ -2,7 +2,7 @@ export class Login{
   /**
    *
    */
-  constructor(loginName:string,password:string) {
+  constructor(loginName:string="",password:string="") {
     this.LoginName=loginName;
     this.Password=password;
   }

@@ -9,31 +9,33 @@
 </ion-navbar>
 
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label stacked>名称</ion-label>
-      <ion-input [(ngModel)]="model.Name" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>金额</ion-label>
-      <ion-input [(ngModel)]="model.Money" type="text"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>类型</ion-label>
-       <ion-select [(ngModel)]="model.CatId">
-        <ion-option *ngFor="let t of cats" value="{{t.Id}}">{{t.Name}}</ion-option>       
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>备注</ion-label>
-      <ion-input [(ngModel)]="model.Description" type="text"></ion-input>
-    </ion-item>    
-    <ion-item>
-      <ion-label stacked>记录时间</ion-label>
-       <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="model.RecordTime"></ion-datetime>
-    </ion-item>
-  </ion-list>
-  <div padding>
-    <button block (click)="create();">提交</button>   
-  </div>
+  <form #recordForm='ngForm' (submit)="doCreate()">
+    <ion-list>
+      <ion-item>
+        <ion-label>名称</ion-label>
+        <ion-input [(ngModel)]="model.Name" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>金额</ion-label>
+        <ion-input [(ngModel)]="model.Money" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>类型</ion-label>
+        <ion-select [(ngModel)]="model.CatId" required>
+          <ion-option *ngFor="let t of cats" checked="{{t.Id==cats[0].Id}}" value="{{t.Id}}">{{t.Name}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>备注</ion-label>
+        <ion-textarea [(ngModel)]="model.Description"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>记录时间</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="model.RecordTime" min="{{min}}" max="{{max}}" cancelText="取消" doneText="确定"></ion-datetime>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button block>提交</button>
+    </div>
+  </form>
 </ion-content>
